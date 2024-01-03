@@ -30,8 +30,14 @@ fetch(url)
         descripcion.classList.add("card-text")
         descripcion.innerText = ultimoElemento.valor
 
+        let fecha = document.createElement("p")
+        fecha.classList.add("card-dia")
+        fecha.innerText = formattedDate
+
+        
         cardBody.appendChild(titulo)
         cardBody.appendChild(descripcion)
+        cardBody.appendChild(fecha)
         tarjeta.appendChild(cardBody)
         estadisticas.appendChild(tarjeta)
 
