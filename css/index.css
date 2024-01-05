@@ -1,9 +1,7 @@
-body{
-    margin:0;
-    padding:0;
-}
-
-nav{
-    margin-top: 50 px ;
-    margin-bottom: 10px;
-}
+body,html {
+    .cambacua {
+        padding: auto;
+        size: 5px;;
+    }
+  }
+  
