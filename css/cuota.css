@@ -1,0 +1,8 @@
+body {
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+    overflow: hidden; /* Evita el desplazamiento horizontal si la imagen es más grande que la ventana del navegador */
+    position: relative;
+}
+.card{
+  margin: auto;
+}
