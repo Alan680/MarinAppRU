@@ -1,7 +1,26 @@
-body,html {
-    .cambacua {
-        padding: auto;
-        size: 5px;;
-    }
-  }
-  
+/* Estilo para el cuerpo (body) */
+body {
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+    overflow: hidden; /* Evita el desplazamiento horizontal si la imagen es más grande que la ventana del navegador */
+    position: relative;
+}
+
+/* Estilo para la clase Cambacua */
+.Cambacua {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ocupa el 100% de la altura de la ventana */
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor manteniendo la relación de aspecto */
+
+}   
+.informacion_general {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 10%; /* Alinea desde la mitad superior del contenedor */
+    left: 50%; /* Alinea desde la mitad izquierda del contenedor */
+    transform: translate(-50%, -10%); /* Centra el contenedor */
+    color: black; /* Cambia el color del texto para que sea legible sobre la imagen */
+    text-align: center; /* Centra el texto horizontalmente */
+    text-decoration: solid;
+}
+.card{
+    margin: auto;
+}
