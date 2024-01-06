@@ -1,4 +1,3 @@
-/* Aplica un ancho máximo al formulario para centrarlo en la página */
 form {
     max-width: 400px; /* Puedes ajustar este valor según tus necesidades */
     margin: 0 auto; /* Centra el formulario en la página */
