@@ -3,28 +3,10 @@ body {
     background-image: url(../images/entre-rios-isla-cambacua-c-del-uy-3jpg.webp);
     background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
     /* Puedes ajustar otros estilos según tus preferencias */
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
-
-    overflow: hidden; /* Evita el desplazamiento horizontal si la imagen es más grande que la ventana del navegador */
+    margin: 0px; /* Elimina el margen predeterminado del cuerpo */
     position: relative;
 }
 
-/* Estilo para la clase Cambacua */
-.Cambacua {
-    width: 100%; /* Ocupa el 100% del ancho del contenedor */
-    height: 100%; /* Ocupa el 100% de la altura de la ventana */
-    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor manteniendo la relación de aspecto */
-
-}   
-.informacion_general {
-    position: absolute; /* Establece el posicionamiento absoluto */
-    top: 10%; /* Alinea desde la mitad superior del contenedor */
-    left: 50%; /* Alinea desde la mitad izquierda del contenedor */
-    transform: translate(-50%, -10%); /* Centra el contenedor */
-    color: black; /* Cambia el color del texto para que sea legible sobre la imagen */
-    text-align: center; /* Centra el texto horizontalmente */
-    text-decoration: solid;
-}
 .card{
     margin: auto;
 }

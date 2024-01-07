@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despacho</title>
     <link rel="stylesheet" href="../css/despacho.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">MarinApp</a>
+        <a class="navbar-brand" href="../index.html">MarinApp</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,41 +39,60 @@
     </div>
 </nav>
 <body>
+    <div class="container">
     <form>
         <fieldset>
           <div class="form-group">
-            <label for="nombreNavio" class="form-label mt-4">Nombre Embarcación</label>
-            <input type="nombre" class="form-control" id="nombreEj" aria-describedby="emailHelp" placeholder="Ingresar nombre">
+            <label for="nombre" class="form-label mt-4" style="color: white;">Nombre Embarcación</label>
+            <input type="nombre" class="form-control" id="nombre" aria-describedby="nombre" placeholder="Ingresar nombre">
           </div>
 
           <div class="form-group">
-            <label for="matricula" class="form-label mt-4">Matricula</label>
-            <input type="matricula" class="form-control" id="matriculaEJ" aria-describedby="matriculaHelpm" placeholder="Ingresar matricula">
+            <label for="matricula" class="form-label mt-4" style="color: white;">Matricula</label>
+            <input type="matricula" class="form-control" id="matricula" aria-describedby="matricula" placeholder="Ingresar matricula">
           </div>
-          
-          <p>Salida para autocompletar</p>
-          
-          <div class="form-group">
-            <label for="destino" class="form-label mt-4">Destino</label>
-            <input type="destino" class="form-control" id="destinoEJ" aria-describedby="destinoHelp" placeholder="Ingresar destino">
-          </div>
-          
-          <p>nombre y apellido de las personas que embarcan</p>  
-
-          <p>numero y tipo de documento de identidad</p>
-
-          <p>Regreso para completar a mano</p>
 
           <div class="form-group">
-            <label for="observaciones" class="form-label mt-4">Observaciones</label>
-            <input type="observaciones" class="form-control" id="observacionesEJ" aria-describedby="observacionesHelp" placeholder="Ingresar observaciones">
+            <label for="fecha" class="form-label mt-4" style="color: white;">Fecha y Hora de Arribo</label>
+            <div class="form-group" id="formFecha"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="destino" class="form-label mt-4" style="color: white;">Destino</label>
+            <input type="destino" class="form-control" id="destino" aria-describedby="destino" placeholder="Ingresar destino">
+          </div>
+          
+          <p style="color:white">Ingreso de Personas</p> 
+          <!-- ver como reducir distancia -->
+            <label for="persona" class="form-label mt-4" style="color: white;">Nombre y Apellido</label>
+            <input type="personas" class="form-control" id="persona" aria-describedby="personas" placeholder="Ingresar Persona">        
+          <button type="button" class="btn btn-primary" id="botonAgregar">Agregar Persona</button>
+          <button type="button" class="btn btn-warning" id="botonEliminar">Eliminar Última Persona</button>
+          
+          <div id="contenedorPersonas">
+            <p></p>
+          </div>
+          
+          <div class="form-group">
+            <label for="documento" class="form-label mt-4" style="color: white;">Documento del Titular</label>
+            <input type="documento" class="form-control" id="documento" aria-describedby="documento" placeholder="Ingresar documento">
           </div>
 
-          <button type="submit" class="btn btn-primary">Aceptar</button>
-          <button type="cancel" class="btn btn-primary">Cancelar</button>
-        </fieldset>
+
+          <div class="form-group">
+            <label for="observaciones" class="form-label mt-4" style="color: white;">Observaciones</label>
+            <input type="observaciones" class="form-control" id="observaciones" aria-describedby="observaciones" placeholder="Ingresar observaciones">
+          </div>
+
+          <button type="button" class="btn btn-primary" id="botonAceptar">Aceptar</button>
+          <button type="button" class="btn btn-warning" id="botonCancelar">Cancelar</button>
+          
+
       </form>
+    </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script type="module" src="../js/despacho.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

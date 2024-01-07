@@ -5,11 +5,10 @@ body {
     background-image: url(../images/isla-del-puerto.jpg);
     background-size : cover;
     overflow: hidden;
-form {
-    max-width: 400px; /* Puedes ajustar este valor según tus necesidades */
-    margin: 0 auto; /* Centra el formulario en la página */
+    
+
   }
-  
+
   /* Establece un ancho para los inputs dentro del formulario */
   .form-control {
     width: 100%; /* El cuadro de entrada ocupará el 100% del ancho del contenedor padre (en este caso, el formulario) */
