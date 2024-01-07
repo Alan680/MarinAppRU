@@ -11,32 +11,56 @@ if (sesionIniciada === 'false'){
         window.location.href = './iniciarSesion.html';
     });
 } else {
-var fechaActual = new Date();
+// Función para crear el formulario con la fecha y hora actual - 3 horas
+function createFormWithDateMinusThreeHours(id) {
+    var fechaActualMenosTresHoras = new Date();
+    // Restar 3 horas a la fecha y hora actual
+    fechaActualMenosTresHoras.setHours(fechaActualMenosTresHoras.getHours() - 3);
+    // Obtén la referencia al elemento del formulario
+    let form = document.getElementById(id);
+    // Agrega la clase "form-group" al formulario
+    form.classList.add("form-group");
+    // Crea un elemento input
+    let input = document.createElement('input');
+    // Establece el tipo del input como "datetime-local"
+    input.type = 'datetime-local';
+    // Formatea la fecha y hora para asignarla al valor del input
+    var fechaFormateada = fechaActualMenosTresHoras.toISOString().slice(0, 16); // Mantén la parte de la fecha y hora
+    input.value = fechaFormateada;
+    // Establece el paso del input a 3600 segundos (1 hora)
+    input.step = "3600";
+    // Agrega el input al formulario
+    form.appendChild(input);
+}
 
-// Restar 3 horas a la fecha y hora actual
-fechaActual.setHours(fechaActual.getHours() - 3);
+// Función para crear el formulario con la fecha y hora fija (20:00)
+function createFormWithFixedTime(id) {
+    var fechaActual = new Date();
+    // Establece la hora fija a las 20:00
+    fechaActual.setHours(17, 0, 0, 0);
+    // Obtén la referencia al elemento del formulario
+    let form = document.getElementById(id);
+    // Agrega la clase "form-group" al formulario
+    form.classList.add("form-group");
+    // Crea un elemento input
+    let input = document.createElement('input');
+    // Establece el tipo del input como "datetime-local"
+    input.type = 'datetime-local';
+    // Formatea la fecha y hora para asignarla al valor del input
+    var fechaFormateada = fechaActual.toISOString().slice(0, 16); // Mantén la parte de la fecha y hora
+    input.value = fechaFormateada;
+    // Establece el paso del input a 3600 segundos (1 hora)
+    input.step = "3600";
+    // Agrega el input al formulario
+    form.appendChild(input);
+}
 
-// Obtén la referencia al elemento formFecha
-let form = document.getElementById('formFecha');
+// Crear el primer formulario con la fecha y hora actual - 3 horas
+createFormWithDateMinusThreeHours('formFechaMenosTresHoras');
 
-// Agrega la clase "form-group" al elemento formFecha
-form.classList.add("form-group");
+// Crear el segundo formulario con la fecha y hora fija (20:00)
+createFormWithFixedTime('formFechaFija');
 
-// Crea un elemento input
-let input = document.createElement('input');
-
-// Establece el tipo del input como "datetime-local"
-input.type = 'datetime-local';
-
-// Formatea la fecha y hora para asignarla al valor del input
-var fechaFormateada = fechaActual.toISOString().slice(0, 16); // Mantén la parte de la fecha y hora
-input.value = fechaFormateada;
-
-// Establece el paso del input a 3600 segundos (1 hora)
-input.step = "3600";
-
-// Agrega el input al formulario
-form.appendChild(input);
 
 // console.log(input.value)
 let botonAceptar = document.getElementById('botonAceptar')
@@ -101,3 +125,9 @@ botonEliminar.addEventListener('click',(e) => {
     personas.pop()
     personasHTML.removeChild(personasHTML.lastChild)}
 })}
+
+let alturaRio = localStorage.getItem('alturaRio') || 0;
+
+// Puedes utilizar 'alturaRio' en toda la barra de navegación o en cualquier lugar necesario.
+// Por ejemplo, puedes asignarlo a un elemento en el DOM.
+document.getElementById("alturaRioNavBar").innerText = `Altura del Río: ${alturaRio}`;

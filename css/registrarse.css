@@ -1,13 +1,13 @@
 body {
-    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
-    overflow: hidden; /* Evita el desplazamiento horizontal si la imagen es más grande que la ventana del navegador */
-    position: relative;
-    background-image: url(../images/isla-del-puerto.jpg);
-    background-size : cover;
-    overflow: hidden;
-    
+  margin: 0; /* Elimina los márgenes por defecto del body */
 
-  }
+  background-image: url(../images/zyro-image.png);
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat;
+  padding-bottom: 10%;
+
+}
 
   /* Establece un ancho para los inputs dentro del formulario */
   .form-control {

@@ -42,3 +42,21 @@ fetch(url)
         estadisticas.appendChild(tarjeta)
 
     })
+    fetch(url)
+    .then((response) => response.json())
+    .then((info) => {
+        const json = info.data;
+        let ultimoElemento = json[json.length - 1];
+
+        // Almacenar el valor en localStorage
+        localStorage.setItem('alturaRio', ultimoElemento.valor);
+
+        // Resto del código para mostrar la información en la tarjeta
+        let tarjeta = document.createElement("div")
+        // ... Resto del código ...
+    });
+    let alturaRio = localStorage.getItem('alturaRio') || 0;
+
+// Puedes utilizar 'alturaRio' en toda la barra de navegación o en cualquier lugar necesario.
+// Por ejemplo, puedes asignarlo a un elemento en el DOM.
+document.getElementById("alturaRioNavBar").innerText = `Altura del Río: ${alturaRio}`;

@@ -24,17 +24,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./alturario.html">Altura Río Uruguay</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Otros
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="cuota.html">Abonar Cuota</a></li>
-                        <li><a class="dropdown-item" href="iniciarSesion.html">Cerrar Sesión</a></li>                        
-                    </ul>
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="cuota.html">Abonar Cuota</a>
                 </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="iniciarSesion.html">Cerrar Sesión</a>
+                </li>                       
+                <li class="nav-item">
+                  <span class="nav-link" id="alturaRioNavBar">Altura del Río: </span>
+              </li>
+              </ul>
         </div>
     </div>
 </nav>
@@ -51,12 +51,12 @@
             <label for="matricula" class="form-label mt-4" style="color: white;">Matricula</label>
             <input type="matricula" class="form-control" id="matricula" aria-describedby="matricula" placeholder="Ingresar matricula">
           </div>
-
           <div class="form-group">
-            <label for="fecha" class="form-label mt-4" style="color: white;">Fecha y Hora de Arribo</label>
-            <div class="form-group" id="formFecha"></div>
-          </div>
-          
+            <label for="fechaMenosTresHoras" class="form-label mt-4" style="color: white;">Fecha y Hora Egreso</label>
+            <div class="form-group" id="formFechaMenosTresHoras"></div>
+        </div>
+        
+                
           <div class="form-group">
             <label for="destino" class="form-label mt-4" style="color: white;">Destino</label>
             <input type="destino" class="form-control" id="destino" aria-describedby="destino" placeholder="Ingresar destino">
@@ -78,6 +78,10 @@
             <input type="documento" class="form-control" id="documento" aria-describedby="documento" placeholder="Ingresar documento">
           </div>
 
+          <div class="form-group">
+            <label for="fechaFija" class="form-label mt-4" style="color: white;">Fecha y Hora Arribo</label>
+            <div class="form-group" id="formFechaFija"></div>
+        </div>
 
           <div class="form-group">
             <label for="observaciones" class="form-label mt-4" style="color: white;">Observaciones</label>
