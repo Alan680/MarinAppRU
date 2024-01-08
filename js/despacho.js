@@ -76,27 +76,39 @@ if (despachosLocales != null) {
 
 botonAceptar.addEventListener('click', (e) =>{
     e.preventDefault()
-    let despacho ={
-    nombre: document.getElementById('nombre').value,
-    matricula:document.getElementById('matricula').value,
-    destino: document.getElementById('destino').value,
-    documento: document.getElementById('documento').value,
-    observaciones: document.getElementById('observaciones').value,
-    personas: personas
+    let despacho = {
+        nombre: document.getElementById('nombre').value,
+        matricula: document.getElementById('matricula').value,
+        destino: document.getElementById('destino').value,
+        documento: document.getElementById('documento').value,
+        observaciones: document.getElementById('observaciones').value,
+        personas: personas
+    };
+    
+    if (despacho.nombre === '' || despacho.matricula === '' || despacho.destino === '' || despacho.documento === '' || despacho.observaciones === '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos ingresados incorrectamente!',
+            text: `Reingrese su información.`,
+            showConfirmButton: false,
+            timer: 2000 // Duración en milisegundos
+        });
+    } else {
+        despachos.push(despacho);
+        console.log(despacho);
+        localStorage.setItem('despachos', JSON.stringify(despachos));
+        Swal.fire({
+            icon: 'success',
+            title: "Despacho realizado con éxito!",
+            html: "Volveremos a la página de iniciar sesión en algunos segundos.",
+            timer: 2000,
+            timerProgressBar: true,
+        }).then((result) => {
+            window.location.href =  '../index.html'
+        });
     }
-
-    despachos.push(despacho)
-
-    console.log(despacho)
-
-    localStorage.setItem('despachos', JSON.stringify(despachos))
-    Swal.fire({
-    icon: 'success',
-    title: "Despacho realizado con exito!",
-    html: "Volveremos a la página de iniciar sesion en algunos segundos.",
-    timer: 2000,
-    timerProgressBar: true,
-})})
+})
+    
 
 
 botonCancelar.addEventListener('click', (e) =>{
