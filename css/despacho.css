@@ -1,35 +1,25 @@
 body {
-  margin: 0; /* Elimina los márgenes por defecto del body */
-
   background-image: url(../images/zyro-image.png);
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
   background-position: center; /* Centra la imagen en el fondo */
   background-repeat: no-repeat;
-  padding-bottom: 10%;
-
 }
 
-form {
-    max-width: 400px; /* Puedes ajustar este valor según tus necesidades */
-    margin: 0 ; /* Centra el formulario en la página */
-  }
-  
-  /* Establece un ancho para los inputs dentro del formulario */
-  .form-control {
-    width: 100%; /* El cuadro de entrada ocupará el 100% del ancho del contenedor padre (en este caso, el formulario) */
-  }
-  .btn {
-    margin-top: 15px;
-  }
-
-  .navbar-nav .nav-link {
-    color: white; /* Cambia el color del texto a blanco */
+.flex {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan cuando no hay suficiente espacio */
+  padding-left: 2%;
+  justify-content: flex-start
+ 
+  height: auto;
+  align-content: center;
 }
 
-.form-label mt-4 {
-  color: white; /* Cambia el color del texto a blanco */
+.card {
+  width: 100%; /* Ocupa el 100% del ancho disponible en dispositivos pequeños */
+  max-width: 400px; /* Límite máximo de ancho */
+  margin: 10px; /* Espaciado entre las tarjetas */
 }
-
 
 
 
