@@ -1,8 +1,14 @@
-body{
-    margin:0;
-    padding:0;
-}
-
+body {
+    background-image: url(../images/zyro-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo para ocupar toda la pantalla */
+    padding: 0; /* Elimina los rellenos predeterminados del cuerpo */
+    height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana (viewport height) */
+    align-items: center; /* Centra verticalmente el contenido en el cuerpo */
+    justify-content: center; /* Centra horizontalmente el contenido en el cuerpo */
+  }
 nav{
     margin-top: 50 px ;
     margin-bottom: 10px;
