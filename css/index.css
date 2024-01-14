@@ -1,15 +1,21 @@
-/* Estilo para el cuerpo (body) */
 body {
-    margin: 0; /* Elimina los márgenes por defecto del body */
-  
-    background-image: url(../images/zyro-image.png);
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    background-repeat: no-repeat;
-    padding-bottom: 10%;
-  
-  }
+  background-image: url(../images/zyro-image-min.png);
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat;
+}
 
-.card{
-    margin: auto;
+.flex {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan cuando no hay suficiente espacio */
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  align-content: center;
+}
+
+.card {
+  width: 100%; /* Ocupa el 100% del ancho disponible en dispositivos pequeños */
+  max-width: 400px; /* Límite máximo de ancho */
+  margin: 10px; /* Espaciado entre las tarjetas */
 }

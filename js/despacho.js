@@ -1,3 +1,4 @@
+
 let sesionIniciada = localStorage.getItem("inicioSesion");
 
 if (sesionIniciada === 'false'){

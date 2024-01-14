@@ -18,12 +18,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
+              <!--  <li class="nav-item">
                     <a class="nav-link" href="./alturario.html">Altura Río Uruguay</a>
-                </li>
+                </li> -->
               
                 <li class="nav-item">
                   <a class="nav-link" href="cuota.html">Abonar Cuota</a>
@@ -41,7 +38,7 @@
     </div>
 </nav>
 <body>
-    <div class="container">
+    <div class="flex">
     <form>
         <fieldset>
           <div class="form-group">
@@ -64,9 +61,9 @@
             <input type="destino" class="form-control" id="destino" aria-describedby="destino" placeholder="Ingresar destino">
           </div>
           
-          <p style="color:white">Ingreso de Personas</p> 
+      
           <!-- ver como reducir distancia -->
-            <label for="persona" class="form-label mt-4" style="color: white;">Nombre y Apellido</label>
+            <label for="persona" class="form-label mt-4" style="color: white;">Nombre y Apellido de las Personas a Bordo </label>
             <input type="personas" class="form-control" id="persona" aria-describedby="personas" placeholder="Ingresar Persona">        
           <button type="button" class="btn btn-primary" id="botonAgregar">Agregar Persona</button>
           <button type="button" class="btn btn-warning" id="botonEliminar">Eliminar Última Persona</button>
@@ -89,7 +86,7 @@
             <label for="observaciones" class="form-label mt-4" style="color: white;">Observaciones</label>
             <input type="observaciones" class="form-control" id="observaciones" aria-describedby="observaciones" placeholder="Ingresar observaciones">
           </div>
-
+          <br>
           <button type="button" class="btn btn-primary" id="botonAceptar">Aceptar</button>
           <button type="button" class="btn btn-warning" id="botonCancelar">Cancelar</button>
           
