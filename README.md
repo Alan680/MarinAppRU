@@ -13,3 +13,5 @@ En primer lugar, la digitalización simplifica el proceso al permitir completar 
 Además, la digitalización facilita la exportación de datos a formatos como Excel, permitiendo un almacenamiento más eficiente y reduciendo el uso de papel. Esta transición a lo digital también elimina problemas asociados con la legibilidad de la información escrita a mano.
 
 En resumen, MarinAppRU no solo agiliza la gestión de despachos náuticos, sino que también contribuye a una operación más eficiente, minimiza el uso de recursos físicos como el papel y mejora la calidad y claridad de la información registrada, brindando así una solución integral para la comunidad náutica y societaria.
+
+Deploy: https://master--marinappru.netlify.app/
